@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Barcode Reader/Scanner"
+        app:titleTextColor="@android:color/white"/>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appToolBar">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:text="Result:"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight=".2"
+            android:textStyle="normal|bold"/>
+
+        <TextView
+            android:id="@+id/tvBarcodeResult"
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight=".7"
+            />
+
+        <Button
+            android:id="@+id/btnScan"
+            android:text="Button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight=".2"
+            android:textColor="@android:color/holo_red_dark"
+            android:onClick="displayBarcodeScanner"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

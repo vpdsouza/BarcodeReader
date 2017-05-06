@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_blue_dark"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:text="@string/btn_cancel"
+            android:textColor="#CCCCCC"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="false"
+            android:layout_marginEnd="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/barcode_scanner_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/flCameraFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llToolBar"
+        android:padding="5dp">
+
+        <com.souzasolutions.barcodereader.ui.camera.CameraPreview
+            android:id="@+id/cpScanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.souzasolutions.barcodereader.ui.camera.GraphicOverlay
+                android:id="@+id/goOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.souzasolutions.barcodereader.ui.camera.CameraPreview>
+
+        <RelativeLayout
+            android:id="@+id/llContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Switch
+                android:id="@+id/switchFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textSize="25sp"
+                android:theme="@style/SwitchTheme"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>
